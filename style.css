@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #031225;
+    color: #e5f2ff;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background: #020d1c;
+    border-bottom: 1px solid #12304c;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #00e5ff;
+    font-size: 28px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00e5ff;
+}
+
+/* HOME SECTION */
+
+.home {
+    min-height: 85vh;
+    padding: 50px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(120deg, #031225, #061b32);
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-content h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.home-content h1 {
+    font-size: 52px;
+    color: #00e5ff;
+    margin-bottom: 10px;
+}
+
+.home-content h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 550px;
+    color: #c4d8ee;
+}
+
+/* BUTTONS */
+
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #00d9ef;
+    color: #00111e;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    box-shadow: 0 0 20px #00e5ff;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #00e5ff;
+    color: white;
+}
+
+/* RIGHT SIDE PROFILE IMAGE */
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.home-image img {
+    width: 300px;
+    height: 360px;
+    object-fit: cover;
+    border: 5px solid #00e5ff;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #00bcd4;
+}
+
+/* COMMON SECTIONS */
+
+.section {
+    padding: 55px 10%;
+}
+
+.heading {
+    font-size: 30px;
+    color: #00e5ff;
+    margin-bottom: 25px;
+}
+
+/* CARDS */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #081c32;
+    border: 1px solid #16466b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00e5ff;
+    box-shadow: 0 0 15px #003b55;
+}
+
+.card h3 {
+    color: #00e5ff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #c4d8ee;
+    line-height: 1.7;
+}
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    padding: 9px 18px;
+    border: 1px solid #00cfe8;
+    border-radius: 25px;
+    color: #00e5ff;
+    background: #081c32;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #00d9ef;
+    color: #00111e;
+}
+
+/* CONTACT */
+
+.contact-details {
+    background: #081c32;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #16466b;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #00e5ff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #16466b;
+    color: #a9c5df;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-content p {
+        margin: auto;
+    }
+
+    .home-image {
+        justify-content: center;
+    }
+
+    .home-content h1 {
+        font-size: 38px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .home-image img {
+        width: 230px;
+        height: 280px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+
+    .section {
+        padding: 40px 6%;
+    }
+}
